@@ -99,7 +99,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/matiszefCZ/plugbot/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/basicBot/source/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -231,31 +231,31 @@
         return str;
     };
 
-    var botCreator = "Yemasthui (EDIT: matizefCZ)";
+    var botCreator = "Yemasthui";
     var botMaintainer = "Benzi"
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "1.0",
+        version: "2.8.17",
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/matiszefCZ/plugbot/master/basicBot.js",
+        scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/matiszefCZ/plugbot/master/lang/cs.json",
+        chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
             botName: "basicBot",
-            language: "Czech",
-            chatLink: "https://rawgit.com/matiszefCZ/plugbot/master/lang/cs.json",
-            scriptLink: "https://rawgit.com/matiszefCZ/plugbot/master/basicBot.js",
+            language: "english",
+            chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
+            scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
-            startupCap: 100, // 1-200
-            startupVolume: 70, // 0-100
-            startupEmoji: true, // true or false
+            startupCap: 1, // 1-200
+            startupVolume: 0, // 0-100
+            startupEmoji: false, // true or false
             autowoot: true,
             autoskip: false,
             smartSkip: true,
@@ -272,9 +272,9 @@
             maximumCycletime: 10,
             voteSkip: false,
             voteSkipLimit: 10,
-            historySkip: true,
+            historySkip: false,
             timeGuard: true,
-            maximumSongLength: 8,
+            maximumSongLength: 10,
             autodisable: true,
             commandCooldown: 30,
             usercommandsEnabled: true,
@@ -2476,7 +2476,7 @@
                         if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.currentlang, {language: basicBot.settings.language}));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get("https://rawgit.com/matiszefCZ/plugbot/master/lang/langIndex.json", function (json) {
+                        $.get("https://rawgit.com/basicBot/source/master/lang/langIndex.json", function (json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === "undefined") {
