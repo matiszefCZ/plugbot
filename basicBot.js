@@ -231,31 +231,31 @@
         return str;
     };
 
-    var botCreator = "Yemasthui";
+    var botCreator = "Yemasthui (EDIT: matizefCZ)";
     var botMaintainer = "Benzi"
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "2.8.17",
+        version: "1.0",
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
+        scriptLink: "https://github.com/matiszefCZ/plugbot/blob/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
+        chatLink: "https://github.com/matiszefCZ/plugbot/blob/master/lang/cs.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
             botName: "basicBot",
-            language: "english",
-            chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
-            scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
+            language: "Czech",
+            chatLink: "https://github.com/matiszefCZ/plugbot/blob/master/lang/cs.json",
+            scriptLink: "https://github.com/matiszefCZ/plugbot/blob/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
-            startupCap: 1, // 1-200
-            startupVolume: 0, // 0-100
-            startupEmoji: false, // true or false
+            startupCap: 100, // 1-200
+            startupVolume: 70, // 0-100
+            startupEmoji: true, // true or false
             autowoot: true,
             autoskip: false,
             smartSkip: true,
@@ -272,9 +272,9 @@
             maximumCycletime: 10,
             voteSkip: false,
             voteSkipLimit: 10,
-            historySkip: false,
+            historySkip: true,
             timeGuard: true,
-            maximumSongLength: 10,
+            maximumSongLength: 8,
             autodisable: true,
             commandCooldown: 30,
             usercommandsEnabled: true,
