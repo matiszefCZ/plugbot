@@ -99,7 +99,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://raw.githubusercontent.com/matiszefCZ/plugbot/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/matiszefCZ/plugbot/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -240,9 +240,9 @@
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://raw.githubusercontent.com/matiszefCZ/plugbot/master/basicBot.js",
+        scriptLink: "https://rawgit.com/matiszefCZ/plugbot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://raw.githubusercontent.com/matiszefCZ/plugbot/master/lang/cs.json",
+        chatLink: "https://rawgit.com/matiszefCZ/plugbot/master/lang/cs.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -250,8 +250,8 @@
         settings: {
             botName: "basicBot",
             language: "czech",
-            chatLink: "https://raw.githubusercontent.com/matiszefCZ/plugbot/master/lang/cs.json",
-            scriptLink: "https://raw.githubusercontent.com/matiszefCZ/plugbot/master/basicBot.js",
+            chatLink: "https://rawgit.com/matiszefCZ/plugbot/master/lang/cs.json",
+            scriptLink: "https://rawgit.com/matiszefCZ/plugbot/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 100, // 1-200
             startupVolume: 70, // 0-100
@@ -2476,7 +2476,7 @@
                         if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.currentlang, {language: basicBot.settings.language}));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get("https://raw.githubusercontent.com/matiszefCZ/plugbot/master/lang/langIndex.json", function (json) {
+                        $.get("https://rawgit.com/matiszefCZ/plugbot/master/lang/langIndex.json", function (json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === "undefined") {
