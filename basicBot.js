@@ -240,9 +240,9 @@
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://github.com/matiszefCZ/plugbot/blob/master/basicBot.js",
+        scriptLink: "https://raw.githubusercontent.com/matiszefCZ/plugbot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://github.com/matiszefCZ/plugbot/blob/master/lang/cs.json",
+        chatLink: "https://raw.githubusercontent.com/matiszefCZ/plugbot/master/lang/cs.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -250,8 +250,8 @@
         settings: {
             botName: "basicBot",
             language: "Czech",
-            chatLink: "https://github.com/matiszefCZ/plugbot/blob/master/lang/cs.json",
-            scriptLink: "https://github.com/matiszefCZ/plugbot/blob/master/basicBot.js",
+            chatLink: "https://raw.githubusercontent.com/matiszefCZ/plugbot/master/lang/cs.json",
+            scriptLink: "https://raw.githubusercontent.com/matiszefCZ/plugbot/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 100, // 1-200
             startupVolume: 70, // 0-100
